@@ -1,0 +1,14 @@
+<table name="exhb_files"> 
+    <column name="exhb_file_id" type="int" size="11" auto_increment="true" primary_key="true" /> 
+    <column name="exhb_id" type="int" size="11" />
+    <column name="file_id" type="int" size="11" />
+
+    <column name="encrypted_file_name" type="varchar" size="100" />
+	<column name="original_file_name" type="varchar" size="100" />
+    <column name="file_size_kb" type="int" size="11" default="0" not_null="true"/>
+    <column name="image_type" type="varchar" size="10" />
+	<column name="image_width" type="int" size="11" />
+	<column name="image_height" type="int" size="11" /> 
+	<column name="full_path" type="varchar" size="200" />
+	<column name="file_path" type="varchar" size="200" /> 
+</table>

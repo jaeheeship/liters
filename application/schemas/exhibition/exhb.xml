@@ -1,0 +1,45 @@
+<table name="exhb">
+    <column name="exhb_id" type="int" size="11"  primary_key="true" /> 
+
+    <!--사용자입력부분-->
+    <column name="address" type="varchar" size="100" /><!--장소-->
+    <column name="map_link" type="varchar" size="500" /><!--네이버맵,혹은 다른 지도 링크-->
+    <column name="homepage" type="varchar" size="100" /><!--전시 홈페이지 링크-->
+    <column name="description" type="text" /><!--전시에 대한 설명--> 
+    <column name="is_slide" type="varchar" size ="1"  default="N" />
+    <column name="main_image_src" type="varchar" size="100"  /><!--전시메인이미지-->
+    <column name="main_image_id" type="int" size="11"  /><!--전시메인이미지--> 
+    <column name="slide_image_src" type="varchar" size="100"  /><!--슬라이드용 이미지 소스-->
+    <column name="slide_image_id" type="int" size="11"  /><!--슬라이드용 이미지-->
+    <column name="press_data_src" type="varchar" size="100"  /><!--전시메인이미지-->
+    <column name="press_data_id" type="int" size="11"  /><!--전시메인이미지-->
+    <column name="poster_image_src" type="varchar" size="100"  /><!--포스터메인이미지-->
+    <column name="poster_image_id" type="int" size="11"  /><!--포스터메인이미지-->
+    <column name="closed" type="varchar" size="100" /><!--휴관일-->
+    <column name="callcenter" type="varchar" size="20" /><!--문의전화-->
+    <column name="visiting_hours" type="varchar" size="50" /><!--관람가능시간 ex) 10:00 - 20:00 -->
+    <column name="fee" type="varchar" size="200" /><!--요금-->
+    <column name="fee_link" type="varchar" size="500"/><!--구매링크-->
+    <column name="start_date" type="date" /><!--전시시작-->
+    <column name="finish_date" type="date"  /><!--전시종료-->
+    <column name="title" type="varchar" size="100" /><!--전시명-->
+    <column name="sub_title" type="varchar" size="100" /><!--전시명-->
+    <column name="tags" type="varchar" size="500" /><!--tags:keyword1,keyword2-->
+    <column name="raw_tags" type="varchar" size="200" /><!--tags:keyword1,keyword2-->
+    <column name="artist_tags" type="varchar" size="500" /><!--artist_tags:keyword1,keyword2-->
+    <column name="status" type="varchar" size="20" /><!--PRIVATE,PUBLIC-->
+    <column name="place_id" type="int" size="11" /><!--관련미술관-->
+    <column name="place_name" type="varchar" size="80" /><!--미술관이름--> 
+    <column name="credit" type="varchar" size="100" /><!--작품 메인 사진 크레디트-->
+
+    <column name="search_keyword" type="varchar" size="100" /> <!--블로그 검색어 -->
+    <column name="information" type="varchar" size="500" /> <!--추가정보  -->
+    <column name="readed_count" type="int" size="11" default="0" />
+
+    <!--서버측에서 자동입력--> 
+    <column name="year" type="int" size="4" /> 
+    <column name="username" type="varchar" size="80" not_null="true"/>
+    <column name="email" type="varchar" size="250"  not_null="true"/>
+    <column name="uid" type="varchar" size="80"  not_null="true"/> 
+    <column name="regdate" type="datetime" /> 
+</table>

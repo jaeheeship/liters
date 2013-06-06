@@ -1,0 +1,11 @@
+<table name="feeds"> 
+    <column name="feed_id" type="int" size="11"  auto_increment="true"  primary_key="true" />
+    <column name="url" type="varchar" size="255" default="0" />
+    <column name="title" type="varchar" size="255" default="0" />
+    <column name="description" type="varchar" size="500" default="0" />
+    <column name="last_update" type="datetime" />
+    <column name="regdate" type="datetime" />
+    <column name="username" type="varchar" size="80" not_null="true"/>
+    <column name="email" type="varchar" size="250"  not_null="true"/>
+    <column name="uid" type="varchar" size="80"  not_null="true"/> 
+</table>

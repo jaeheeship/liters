@@ -1,0 +1,31 @@
+# OS generated files #
+######################
+.DS_STORE
+.DS_Store
+.DS_STORE?
+._*
+.swp
+.txt
+.Trashes
+.DS_Store
+application/.DS_Store
+Icon?
+Thumbs.db
+
+application/config/database.php
+application/config/apikey.php
+
+# directory #
+############
+user_guide/
+files/
+cache/
+logs/
+server/
+cache/
+# temp #
+*.bak
+*.bak*
+*.bak.*
+*.swp
+*htaccess

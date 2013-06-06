@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+ul.nav li { line-height:40px;}
+html {margin:0px;background:url('../img/pattern.png') repeat; }
+body {background-color:#f2f2f2;margin:0px; }
+header.header .top_nav {padding:0px;margin:0px; ;background:url('../img/top_nav_bg.png') repeat-x top;height:33px; }
+header.header .top_nav ul { list-style:none;display:inline-block;padding:0px;margin:0px;padding-top:5px;}
+header.header .top_nav ul li { float:left; padding : 0px 10px 0px 10px;font-size:0.9em; color:#fff;}
+header.header .top_nav ul li a {color:#fff; }
+header.header {;margin-bottom:20px;margin-top:0px; }
+header.header .gnb {display:inline ; list-style:none ; }
+header.header ul.gnb {display:block ; }
+header.header ul.gnb li { float:left ;height:30px;padding-left:30px;padding-right:30px;text-align:center;} 
+header.header ul.gnb li a { font-size:1.2em;display:block;color:#999; }
+header.header ul.gnb li a:hover { color:#00afec;}
+footer.footer {
+       margin-top:40px;font-family:'NanumGothic','Nanum Gothic','MalgunGothic','Dotum';color:#000;font-size:0.9em;
+        }
+footer.footer a { color:#000;}
+footer.footer ul { list-style :none;margin-left:0px; margin-bottom:20px;}
+footer.footer ul li { border-left:1px solid #333;padding:3px 0px 3px 20px;}
+footer.footer .footer_first_row { height:30px; }
+footer.footer .footer_second_row { height:80px;  }
+
+a.sns_button { display:block; width:28px;height:28px;text-decoration:none }
+a.sns_button_twitter { background:url('../img/sns_icon.png') no-repeat -0px -0px;} 
+a.sns_button_twitter:hover { background:url('../img/sns_icon.png') no-repeat -0px -0px;} 
+
+
+a.sns_button_facebook { background:url('../img/sns_icon.png') no-repeat -0px -30px;} 
+a.sns_button_facebook:hover { background:url('../img/sns_icon.png') no-repeat -0px -30px;} 
+
+.liner {background:url('../img/liner.png') bottom repeat-x ; }
+
+.box_shadow {border-radius:5px;box-shadow : 0 5px 10px rgba(0,0,0,0.2);
+behavior : url('/assets/pie/PIE.php') ; 
+}
+
+.main_exhb_box {background:#f0f0f0;}
+.main_exhb_box img {float:left;width:70%}
+.main_exhb_side_box {float:left;}

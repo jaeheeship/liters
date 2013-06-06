@@ -1,0 +1,30 @@
+<table name="place"> 
+    <column name="place_id" type="int" size="11"  primary_key="true" /> 
+    <column name="place_type" type="varchar" size="20" />
+    <column name="place_name" type="varchar" size="80" />
+    <column name="place_eng_name" type="varchar" size="80" />
+    <column name="place_category" type="varchar" size="80" />
+    <column name="status" type="varchar" size="80" /> <!--public,private-->
+    <column name="tel" type="varchar" size="20" />
+    <column name="address" type="varchar" size="100" />
+    <column name="lat" type="varchar" size="20" />
+    <column name="lng" type="varchar" size="20" />
+    <column name="logo_src" type="varchar" size="100" />
+    <column name="logo_id" type="int" size="11" />
+    <column name="main_image_src" type="varchar" size="100" />
+    <column name="main_image_id" type="int" size="11" />
+    <column name="homepage" type="varchar" size="120" />
+    <column name="twitter" type="varchar" size="120" />
+    <column name="facebook" type="varchar" size="120" />
+    <column name="blog" type="varchar" size="120" />
+    <column name="address" type="varchar" size="100" /> 
+    <column name="tags" type="varchar" size="500" />
+    <column name="raw_tags" type="varchar" size="200" />
+    <column name="closed" type="varchar" size="100" /><!--휴관일-->
+
+    <column name="username" type="varchar" size="50" not_null="true"/>
+    <column name="email" type="varchar" size="100" not_null="true"/> 
+    <column name="uid" type="int" size="11" not_null="true"/>
+
+    <column name="regdate" type="datetime" />
+</table>

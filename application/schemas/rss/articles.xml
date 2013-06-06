@@ -1,0 +1,15 @@
+<table name="articles"> 
+    <column name="article_id" type="int" size="11" primary_key="true" />
+    <column name="main_image_src" type="varchar" size="255" />
+    <column name="link" type="varchar" size="255" default="0" />
+    <column name="title" type="varchar" size="255" default="0" />
+    <column name="description" type="text"  />
+    <column name="pubdate" type="datetime"  />
+    <column name="regdate" type="datetime"  />
+
+    <column name="username" type="varchar" size="50"/>
+    <column name="email" type="varchar" size="100"/> 
+    <column name="uid" type="int" size="11" />
+
+	<column name="ip_address" type="varchar" size="32" />
+</table>

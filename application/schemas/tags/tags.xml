@@ -1,0 +1,11 @@
+<table name="tags">
+    <column name="tag_id" type="int" size="11" primary_key="true"  />
+    <column name="tag_key" type="varchar" size="120"  />
+    <column name="tag_name" type="varchar" size="100" />
+    <column name="tag_type" type="varchar" size="20" />
+    <column name="tag_count" type="varchar" size="20" />
+    <column name="uid" type="int" size="11" />
+    <column name="username" type="varchar" size="50" />
+    <column name="regdate" type="datetime" />
+    <column name="modifydate" type="datetime" />
+</table>

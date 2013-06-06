@@ -1,0 +1,13 @@
+<table name="article_x_files"> 
+    <column name="id" type="int" size="11" auto_increment="true" primary_key="true" />
+    <column name="article_id" type="int" size="11" not_null="true" /> 
+    <column name="file_id" type="int" size="11" not_null="true" />
+    <column name="full_path" type="varchar" size="255" not_null="true" />
+    <column name="file_path" type="varchar" size="255" not_null="true" />
+    <column name="is_image" type="int" size="1" />
+	<column name="file_type" type="varchar" size="10" />
+	<column name="image_width" type="int" size="11" />
+	<column name="image_height" type="int" size="11" /> 
+	<column name="encrypted_file_name" type="varchar" size="100" />
+	<column name="original_file_name" type="varchar" size="100" />
+</table>

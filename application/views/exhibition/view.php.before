@@ -1,0 +1,102 @@
+<style>
+    .content_box {background:#fff;}
+    .content_box p { padding:30px;font-size:1.1em;line-height:170%;} 
+    .info_box { border-radius:5px;box-shadow: #e1e1e1 2px 2px 5px;border:1px solid #ddd;}
+    .info_box * { font-family:NanumGothic,MalgunGothic,Dotum;}
+    .info_box .info_box_header {width:100%; background:url("<?=img_asset_url('sidebar_pattern.png')?>"); }
+    .info_box .info_box_content {padding:20px; }
+    .info_box .info_box_content .table {font-size:0.85em;}
+    .info_box .info_box_footer {font-size:0.85em;}
+    .no-padding { padding:0px !important;}
+
+    .letter4 {letter-spacing:1px; }
+    .letter3 {letter-spacing:6px; }
+    .letter2 {letter-spacing:20px; }
+
+</style>
+<div class="row">
+    <div class="span12">
+        <h6 style="color:#000;font-family:NanumGothic;font-weight:200;font-size:1.4em;"><?=$exhb->title; ?></h6>
+        <hr/>
+    </div>
+    <div class="span8">
+
+        <div style="border:1px solid #ccc;border-radius:5px;"> 
+            <div>
+                <img src="<?=base_url()?><?=$exhb->main_image_src?>" style="width:100%;" />
+            </div>
+        <div class="content_box">
+            <p style="padding:30px;"> 
+                <?=$exhb->description;?>
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="span4">
+        <div style="border-left:1px solid #ccc;">
+        <!--<h6 style="color:#888;margin:30px 0px 30px 0px;font-family:NanumGothic;font-weight:200;font-size:1.1em;"><img src="<?= img_asset_url('title_ico.png')?>"/>&nbsp;</h6>-->
+
+        <div class="info_box" >
+            <div class="info_box_header">
+                <div style="padding:20px;">
+                <a class="btn btn-success btn-large btn-block"> 전시중 Information</a>
+                </div>
+            </div>
+            <div class="info_box_content">
+	        <table  class="table">
+	            <tbody> 
+	                <tr> 
+	                    <th style="width:80px;"><i class="icon icon-map-marker"></i>&nbsp;<span class="letter2">장소</span> </th>
+	                    <td><?=$exhb->place;?> </td>
+	                </tr>
+	
+	                <tr> 
+	                    <th><i class="icon icon-th"></i>&nbsp;<span class="letter2">기간</span> </th>
+	                    <td><?=$exhb->start_date?>&nbsp;부터 <br/><?=$exhb->finish_date;?>&nbsp;까지 전시합니다. </td>
+	                </tr>
+	                <tr> 
+	                    <th><i class="icon icon-time"></i>&nbsp;<span class="letter4">개관시간</span> </th>
+	                    <td><?=$exhb->visiting_hours?> </td>
+	                </tr>
+	                <tr> 
+	                    <th><i class="icon icon-question-sign"></i>&nbsp;<span class="letter3">휴관일</span> </th>
+	                    <td><?=$exhb->closed?>  </td>
+	                </tr>
+                    <tr> 
+	                    <th><i class="icon-h"></i>&nbsp;<span class="letter2">가격</span> </th>
+	                    <td><?=$exhb->fee?> </td>
+	                </tr>
+	            </tbody>
+	        </table>
+            </div>
+        </div><!-- end of .info_box-->
+        <hr/>
+        <div class="info_box">
+            <!--<div class="info_box_header">
+                <div style="padding:20px;">
+                Map 
+                </div>
+
+            </div>-->
+            <div class="info_box_content no-padding"> 
+                <?php include('map.php')?>
+            </div>
+            <div style="padding:10px;font-size:0.9em;">
+                <strong><?=$exhb->place?></strong><br/>
+                <?=$exhb->address ?>
+            </div>
+        </div>
+        <hr/>
+        <div class="info_box">
+            <div class="info_box_header">
+                <div style="padding:20px;">
+                연관 태그
+                </div>
+            </div>
+            <div class="info_box_content" style="font-size:0.9em;"> 
+                <?=$exhb->raw_tags;?>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
