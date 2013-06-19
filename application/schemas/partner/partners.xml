@@ -1,0 +1,23 @@
+<table name="partners">
+    <column name="partner_id" type="int" size="11"  primary_key="true" /> 
+
+    <!--사용자입력부분-->
+    <column name="main_image_src" type="varchar" size="100"  /><!--전시메인이미지-->
+    <column name="main_image_id" type="int" size="11"  /><!--전시메인이미지--> 
+    <column name="slide_image_src" type="varchar" size="100"  /><!--슬라이드용 이미지 소스-->
+    <column name="slide_image_id" type="int" size="11"  /><!--슬라이드용 이미지-->
+    <column name="press_data_src" type="varchar" size="100"  /><!--전시메인이미지-->
+    <column name="press_data_id" type="int" size="11"  /><!--전시메인이미지-->
+    <column name="partner_image_src" type="varchar" size="100"  /><!--포스터메인이미지-->
+    <column name="partner_image_id" type="int" size="11"  /><!--포스터메인이미지-->
+    <column name="title" type="varchar" size="100" /><!--전시명-->
+    <column name="description" type="varchar" size="500" /><!--전시명-->
+    <column name="link" type="varchar" size="100" />
+
+    <!--서버측에서 자동입력--> 
+    <column name="year" type="int" size="4" /> 
+    <column name="username" type="varchar" size="80" not_null="true"/>
+    <column name="email" type="varchar" size="250"  not_null="true"/>
+    <column name="uid" type="varchar" size="80"  not_null="true"/> 
+    <column name="regdate" type="datetime" /> 
+</table>

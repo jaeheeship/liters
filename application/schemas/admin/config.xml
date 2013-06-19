@@ -1,0 +1,5 @@
+<table name="config">
+    <column name="config_id" type="int" size="11" auto_increment="true" primary_key="true" />
+    <column name="config_key" type="varchar" size="50"  />
+    <column name="config_val" type="varchar" size="200"  />
+</table>
