@@ -57,10 +57,10 @@ $(window).load(function(){
 		        '<div class="innerItemBox">'+
 			        '<div class="exhibition_item">'+
 			            '<div class="image_section">'+
-			                '<a href="<?=base_url()?>exhibition/view/{exhb_id}"><img src="{thumbnail_url}"/></a>'+
+			                '<a href="{link}"><img src="{thumbnail_url}"/></a>'+
 			            '</div>'+
 			            '<div class="info_section">'+
-			                '<h5 style="text-align:right;"><a href="<?=base_url()?>exhibition/view/{exhb_id}" style="font-family:NanumGothic,Nanum Gothic;">{title}</a></h5>'+
+			                '<h5 style="text-align:right;"><a href="{link}" style="font-family:NanumGothic,Nanum Gothic;">{title}</a></h5>'+
 			                '<div class="description" style="text-align:right;">'+
                                 '</div>'+
 			            '</div>'+
