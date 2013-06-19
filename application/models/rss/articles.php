@@ -19,8 +19,8 @@ class Articles extends CI_Model{
         $data->regdate = date("Y-m-d H:i:s") ; 
 
         if($this->db->insert($this->table,$data)){
-            $id = $this->db->insert_id() ; 
-            $data->article_id = $id ; 
+            //$id = $this->db->insert_id() ; 
+            //$data->article_id = $id ; 
 
             return $data ; 
         }
@@ -108,7 +108,7 @@ class Articles extends CI_Model{
 
         while( ($cnt=$cnt-1) >= 0 ){
             $ret_arr[] = $this->store($items[$cnt]); 
-        }
+        } 
 
         return $ret_arr ; 
     }
@@ -121,9 +121,9 @@ class Articles extends CI_Model{
 
         unset($data->pubDate) ; 
 
-        if($this->insert($data) ){ 
-            $id = $this->db->insert_id() ; 
-            $data->article_id = $id ; 
+        if($this->insert($data)){
+            //$id = $this->db->insert_id() ;
+            //$data->article_id = $id ;
 
             return $data ; 
         }
@@ -144,7 +144,7 @@ class Articles extends CI_Model{
         return null ;
     }
 
-    function getArticleById($id){
+    public function getArticleById($id){
         if($id > 0 ){
             $query = $this->db->get_where($this->table , array('article_id'=>$id)) ; 
             $arr = $query->result() ; 
@@ -153,7 +153,6 @@ class Articles extends CI_Model{
                 return $arr[0] ; 
             }
         }
-
         return null ; 
     }
 

@@ -138,7 +138,7 @@ $config['recaptcha_private_key'] = '';
 | (except 'ci_sessions' table).
 |--------------------------------------------------------------------------
 */
-$config['db_table_prefix'] = 'AG_'; //tank_auth
+$config['db_table_prefix'] = 'LT_'; //tank_auth
 
 
 /* End of file tank_auth.php */

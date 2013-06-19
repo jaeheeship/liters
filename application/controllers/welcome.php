@@ -21,10 +21,17 @@ class Welcome extends CI_Controller {
         $this->load->database() ; 
 
         $this->load->model('rss/articles') ; 
+        $this->load->model('config_model') ; 
+        $result = $this->config_model->getConfigBy('config_key','column') ; 
+
+        if($result){
+            $column = $result->config_val  ; 
+        }
+
         $this->load->model('exhibition/exhb_model') ; 
         $this->load->helper('image') ; 
 
-        $list_count = 20 ; 
+        $list_count = 30 ; 
 
         $result = $this->articles->getArticleList($page,$list_count) ; 
         $pagination = $result['pagination'] ; 
@@ -47,6 +54,8 @@ class Welcome extends CI_Controller {
         $data['page'] = $page ; 
         $data['page_count'] = $pagination['page_count'] ; 
         $data['items'] = $list; 
+        
+
 
         echo json_encode($data) ; 
 
@@ -76,6 +85,24 @@ class Welcome extends CI_Controller {
         $data['page_count'] = $pagination['page_count']; 
         $data['recent_post'] = $result['list'] ; 
         //$data['exhibition_list'] = $exhb_result['list'] ; 
+        //
+        $this->load->model('config_model') ; 
+        $result = $this->config_model->getConfigBy('config_key','column') ; 
+
+        if($result){
+            $column = $result->config_val  ; 
+        }
+
+        $data['column'] = $column ; 
+        if($column == 1){
+            $data['width'] = '800px' ; 
+        }else if($column == 2){
+            $data['width'] = '450px' ; 
+        }else if($column == 3 ){
+            $data['width'] = '300px' ; 
+        }else if($column == 4 ){
+            $data['width'] = '220px' ; 
+        }
 
         $this->aglayout->show($data) ; 
 

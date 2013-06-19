@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>이야기가 함께하는 아트그라피</title>
+    <title>혼자이면서 함께사는 집::</title>
     <?echo css_asset('bootstrap.css','bootstrap') ?>
     <?echo css_asset('/smoothness/jquery-ui-1.8.20.custom.css','jquery') ?>
     <?echo js_asset('jquery-1.7.2.min.js','jquery') ?>
@@ -17,28 +17,15 @@
         <div class="navbar-inner navbar-fixed-top">
             <div>
                 <ul class="nav"> 
-                    <li <?php if($this->uri->segment(2)=='dashboard'):?> class="active" <?php endif;?>> 
-                        <a href="<?=base_url()?>admin/dashboard">Dashboard</a>
-                    </li>
-                    <li <?php if($this->uri->segment(2)=='member'):?> class="active" <?php endif;?>> 
-                        <a href="<?=base_url()?>admin/member/memberlist">Member</a>
-                    </li> 
                     <li <?php if($this->uri->segment(2)=='rss'):?> class="active" <?php endif;?>> 
                         <a href="<?=base_url()?>admin/rss/feedlist">RSS</a>
                     </li> 
-                    <li <?php if($this->uri->segment(2)=='template'):?> class="active" <?php endif;?>> 
-                        <a href="<?=base_url()?>admin/template/showlist">TEMPLATE</a>
-                    </li> 
                     <li <?php if($this->uri->segment(2)=='filebox'):?> class="active" <?php endif;?>> 
                         <a href="<?=base_url()?>admin/filebox/uploadForm">FILEBOX</a>
-                    </li>
-
-                    <li <?php if($this->uri->segment(2)=='exhibition'):?> class="active" <?php endif;?>> 
-                        <a href="<?=base_url()?>admin/exhibition/exhbList">EXHIBITION</a>
                     </li> 
-                    <li <?php if($this->uri->segment(2)=='place'):?> class="active" <?php endif;?>> 
-                        <a href="<?=base_url()?>admin/place/placeList">PLACE</a>
-                    </li>
+                    <li <?php if($this->uri->segment(2)=='partner'):?> class="active" <?php endif;?>> 
+                        <a href="<?=base_url()?>admin/partner/partnerForm">PARTNER</a>
+                    </li> 
                     <li <?php if($this->uri->segment(2)=='control_panel'):?> class="active" <?php endif;?>> 
                         <a href="<?=base_url()?>admin/control_panel/schemaList">CONTROL PANEL</a>
                     </li>

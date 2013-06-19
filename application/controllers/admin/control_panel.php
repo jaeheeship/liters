@@ -11,6 +11,35 @@ class Control_panel extends ADMIN_Controller {
         useq() ; 
     }
 
+    public function setColumn(){
+        $column = $this->input->post('column') ;
+        $this->load->model('config_model') ; 
+        $result = $this->config_model->getConfigBy('config_key','column') ; 
+
+        $data = array() ; 
+        $data['config_key'] = 'column' ; 
+        $data['config_val'] = $column ; 
+
+        if($result){
+            $data['config_id'] = $result->config_id ; 
+            $this->config_model->update($data) ; 
+        }else{ 
+            $this->config_model->insert($data) ; 
+        }
+    }
+
+    public function layout(){
+        $this->aglayout->layout('admin/layout'); 
+        $this->aglayout->moduleViewPath('admin/control_panel/') ; 
+        $this->aglayout->add('header') ; 
+        $this->aglayout->add('sidebar') ; 
+        $this->aglayout->add('layout') ; 
+        $this->aglayout->add('footer') ; 
+
+        $this->aglayout->show() ; 
+
+    }
+
     public function refreshTable(){
         $table_name = $this->input->post('table_name') ;
         $table_path = $this->input->post('table_path') ;

@@ -38,8 +38,8 @@
 |
 */
 
-$route['default_controller'] = "exhibition/welcome";
-$route['thanksForYourLetter'] = "welcome/thanks";
+$route['default_controller'] = "welcome";
+//$route['thanksForYourLetter'] = "welcome/thanks";
 $route['404_override'] = '';
 
 

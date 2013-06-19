@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>이야기가 함께하는 아트그라피</title>
+    <title>::</title>
     <?echo css_asset('bootstrap.css','bootstrap') ?>
     <?echo css_asset('/smoothness/jquery-ui-1.8.20.custom.css','jquery') ?>
     <?echo js_asset('jquery-1.7.2.min.js','jquery') ?>
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row" style="position:relative;"> 
                 <div style="position:absolute;top:20px;left:20px;"> 
-                    <img src="<?=img_asset_url('artgrafii_logo.png')?>" style="width:130px;"/>
+                    <img src="<?=img_asset_url('3liters_logo.png')?>" style="width:130px;"/>
                 </div>
                 <div class="span12">
                     <div class="" style="margin-top:60px;text-align:center;">

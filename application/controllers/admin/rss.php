@@ -78,8 +78,11 @@ class Rss extends ADMIN_Controller {
         $arr = $this->articles->stores($items) ; 
 
         foreach($arr as $key => $row){ 
+            print_r($row) ; 
             $row->article_id ; 
-            $this->extractImageFromNaverBlog($row->article_id) ; 
+            //$this->extractImageFromNaverBlog($row->article_id) ; 
+            print_r($row->article_id) ; 
+            $this->attachImageToArticle($row->article_id) ; 
         }
     }
 
@@ -114,7 +117,7 @@ class Rss extends ADMIN_Controller {
     }
 
     public function extractAllImage(){
-        /*$this->load->model('/rss/articles') ; 
+        $this->load->model('/rss/articles') ; 
 
         $data['action'] = 'articleList' ; 
         $data['search_keyword'] = '' ; 
@@ -130,15 +133,15 @@ class Rss extends ADMIN_Controller {
         $data['list'] = $result['list']  ; 
 
         foreach($data['list'] as $key => $row){ 
-            $this->extractImageFromNaverBlog($row->article_id) ; 
-        } */
+            $this->attachImageToArticle($row->article_id) ; 
+            //$this->extractImageFromNaverBlog($row->article_id) ; 
+        } 
     } 
 
     public function attachImageToArticle($article_id){
-        $this->load->model('/rss/articles') ; 
+        $this->load->model('rss/articles','articles') ; 
 
         $param = array() ; 
-
         $article = $this->articles->getArticleById($article_id) ; 
 
         $this->extractImageFromNaverBlog($article->article_id) ; 
@@ -253,7 +256,7 @@ class Rss extends ADMIN_Controller {
         if($article){ 
             $arr = explode('/',$article->link) ; 
             $post_no = end($arr) ; 
-            $link ='http://blog.naver.com/PostView.nhn?blogId=artgrafii&logNo='.$post_no ;  
+            $link ='http://blog.naver.com/PostView.nhn?blogId=3liters&logNo='.$post_no ;  
             $html = file_get_contents($link) ; 
 
             $this->load->library('simple_html_dom') ; 
