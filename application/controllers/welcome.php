@@ -17,6 +17,26 @@ class Welcome extends CI_Controller {
         $this->aglayout->show() ;
     }
 
+    public function view($article_id){
+        $this->load->library('aglayout'); 
+        $this->aglayout->layout('ag_layout_ver2/iframe_layout'); 
+
+        $this->aglayout->moduleViewPath('welcome/ver1/') ; 
+        $this->aglayout->add('view') ; 
+
+        $this->load->database() ; 
+
+        $this->load->model('rss/articles') ; 
+        $this->load->model('exhibition/exhb_model') ; 
+        $this->load->helper('image') ; 
+
+
+        $item = $this->articles->getArticleById($article_id) ; 
+        $data = array() ; 
+        $data['article'] = $item ; 
+        $this->aglayout->show($data) ; 
+    }
+
     public function getData($page=1){
         $this->load->database() ; 
 
@@ -48,6 +68,7 @@ class Welcome extends CI_Controller {
             }
 
             $list[$key]->thumbnail_url = $thumbnail_url ; 
+            $list[$key]->iframe_link = base_url().'welcome/view/'.$list[$key]->article_id ; 
             $list[$key]->description = mb_strcut($row->description,0,250).'...';
         }
 
@@ -102,6 +123,17 @@ class Welcome extends CI_Controller {
             $data['width'] = '300px' ; 
         }else if($column == 4 ){
             $data['width'] = '220px' ; 
+        }
+
+        $result = $this->config_model->getConfigBy('config_key','css_id') ; 
+        if($result){
+            $file_id = $result->config_val  ; 
+            $this->load->model('filebox/filebox_model') ; 
+            $css_file = $this->filebox_model->getFile($file_id) ; 
+
+            if($css_file){
+                $data['css_file'] = $css_file->full_path ; 
+            }
         }
 
         $this->aglayout->show($data) ; 

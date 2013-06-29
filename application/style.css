@@ -1,0 +1,42 @@
+/*
+ * 글자 타입
+ */
+a {font-family:'NanumGothic','Nanum Gothic','MalgunGothic','Dotum';font-size:10px;} 
+
+
+/*
+ * itemBox 스타일
+ */
+
+.itemBox .innerItemBox {padding-left:0px;padding-right:0px;padding-top:00px;padding-bottom:0px;border:1px solid #ccc; 
+    -webkit-box-shadow: #666 2px 2px 5px;
+    -moz-box-shadow: #ddd 2px 2px 5px;
+    box-shadow: #e1e1e1 2px 2px 5px;
+    font-family:'NanumGothic','Nanum Gothic','MalgunGothic','Dotum'; 
+} 
+
+.itemBox .innerItemBox .info_section:hover  { background : #00aefc;}
+.itemBox .innerItemBox .exhibition_item .image_section {} 
+
+/*
+ * itemBox 배경색
+ */
+.itemBox .innerItemBox .exhibition_item .info_section {padding:5px; background:#00afec; } 
+
+
+.itemBox .innerItemBox .exhibition_item .info_section .description {color:#888;font-size:0.85em;padding-bottom:10px; 
+font-family:'NanumGothic','Nanum Gothic','MalgunGothic','Dotum';
+
+}
+
+
+.banner_item { padding:10px; }
+.banner_item h6 { color:#000;font-weight:100;}
+
+.mouseover .info_section { background:#efefef !important;
+    -webkit-transition: background .25s linear;
+    -moz-transition: background .25s linear;
+    transition: background .25s linear;
+}
+.mouseover .info_section a {color:#484848 !important;}
+.mouseover .info_section .description {color:#484848 !important;}

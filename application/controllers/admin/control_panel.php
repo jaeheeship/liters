@@ -28,6 +28,69 @@ class Control_panel extends ADMIN_Controller {
         }
     }
 
+    public function save_css(){
+        $this->load->library('uploadhandler') ; 
+
+        $file_fields = array('css') ; 
+
+        $file_cnt = 0 ; 
+        $obj = new stdClass ; 
+
+        foreach($file_fields as $key => $field){
+            if(($upload_data = $this->uploadhandler->upload($field))){ 
+                $file_cnt++ ; 
+                $file_id = $upload_data->file_id ; 
+
+                !is_dir('files') ? mkdir('files',0777) : null ; 
+                !is_dir('files/css') ? mkdir('files/css',0777) : null ; 
+
+                copy($upload_data->full_path , './files/css/'.$upload_data->encrypted_file_name) ; 
+            }
+        }
+
+        redirect('admin/control_panel/css') ; 
+    }
+
+    public function select_css(){
+        $css_id = $this->input->post('file_id') ;
+        $this->load->model('config_model') ; 
+        $result = $this->config_model->getConfigBy('config_key','css_id') ; 
+
+        $data = array() ; 
+        $data['config_key'] = 'css_id' ; 
+        $data['config_val'] = $css_id ; 
+
+        if($result){
+            $data['config_id'] = $result->config_id ; 
+            $this->config_model->update($data) ; 
+        }else{ 
+            $this->config_model->insert($data) ; 
+        }
+    }
+
+    public function css(){
+        $data = array() ;  
+        
+        $this->load->model('filebox/filebox_model') ; 
+
+        $this->load->model('config_model') ; 
+        $result = $this->config_model->getConfigBy('config_key','css_id') ; 
+
+        if($result){ 
+            $data['css_id'] = $result->config_val ; 
+        }
+
+        $data['cssList'] = $this->filebox_model->getCssList() ;
+        $this->aglayout->layout('admin/layout'); 
+        $this->aglayout->moduleViewPath('admin/control_panel/') ; 
+        $this->aglayout->add('header') ; 
+        $this->aglayout->add('sidebar') ; 
+        $this->aglayout->add('css') ; 
+        $this->aglayout->add('footer') ; 
+
+        $this->aglayout->show($data) ; 
+    } 
+
     public function layout(){
         $this->aglayout->layout('admin/layout'); 
         $this->aglayout->moduleViewPath('admin/control_panel/') ; 
@@ -37,7 +100,6 @@ class Control_panel extends ADMIN_Controller {
         $this->aglayout->add('footer') ; 
 
         $this->aglayout->show() ; 
-
     }
 
     public function refreshTable(){

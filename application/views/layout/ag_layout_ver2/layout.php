@@ -22,19 +22,29 @@
     var base_url = '<?=base_url()?>'; 
     </script>
 </head>
-<body>
-    <header class="header">
-        <div class="top_nav">
-            <div class="container">
-            <ul class="pull-right" style="padding-top:0px;">
-                <!--<li><a href="<?=base_url()?>blog"><i class="icon icon-comment"></i>&nbsp;Blog</a></li>-->
-                <!--<li><a style="display:block;padding-top:5px;" href="<?=base_url()?>exhibition"><i class="icon icon-white icon-th"></i>&nbsp;Exhibition</a></li>
-                <li style="padding-right:0px;"><a class="sns_button sns_button_twitter" href="http://www.twitter.com/artgrafii" target="_blank">&nbsp;</a></li>
-                <li style="padding-right:0px;"><a class="sns_button sns_button_facebook" href="http://www.facebook.com/artgrafii" target="_blank">&nbsp;</a></li>-->
-            </ul>
+<body style="padding-top:40px;">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">혼자이면서 함께사는 집::3liters</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li class="">
+                    <a href="<?=base_url();?>"><span class="icon icon-home icon-white"></span>&nbsp;Home</a>
+                    </li> 
+                </ul>
             </div>
         </div>
-        <div>
+    </div>
+</div> 
+
+
+    <header class="header"> 
         <div class="container" >
             <div class="row" style="height:60px;padding-top:15px;padding-bottom:15px;"> 
                 <div class="span2" style="margin-top:7px;"> 

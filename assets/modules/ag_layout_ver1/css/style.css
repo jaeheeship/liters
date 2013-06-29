@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
-ul.nav li { line-height:40px;}
 html {margin:0px;background:url('../img/pattern.png') repeat; }
 body {background-color:#f2f2f2;margin:0px; }
 header.header .top_nav {padding:0px;margin:0px; ;background:url('../img/top_nav_bg.png') repeat-x top;height:33px; }

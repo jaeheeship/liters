@@ -56,6 +56,15 @@ class Filebox_model extends CI_Model {
         $this->db->update($this->table , $param ,array('file_id'=>$file_id)) ; 
     }
 
+    public function getCssList(){
+        $this->db->order_by('file_id','desc') ; 
+
+        $this->db->like('original_file_name','css'); 
+        $query = $this->db->get($this->table) ; 
+
+        return  $query->result() ; 
+    }
+
     public function getFileList($page=1,$list_count=10,$search_param=null){
         $this->db->limit($list_count , ($page-1)*$list_count ) ; 
         $this->db->order_by('file_id','desc') ; 
